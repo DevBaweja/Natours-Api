@@ -90,6 +90,19 @@ M Modified
 */
 
 /*
+Production Modification
+
+Compression
+npm i compression 
+To compress all the responses
+
+Getting rid of unnecessary logs
+
+Also axios call can be made to relative URL since 
+website and api are hosted on same platform
+*/
+
+/*
 TODO:
 API
 
