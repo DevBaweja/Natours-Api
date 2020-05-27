@@ -100,6 +100,30 @@ Getting rid of unnecessary logs
 
 Also axios call can be made to relative URL since 
 website and api are hosted on same platform
+
+*/
+/*
+Modern Tech Stack
+
+Nodejs
+Express
+MongoDb Shell/Compass/Atlas
+Mongoose
+Postman
+
+Stripe
+Mailtrap
+Mailsac
+
+AWS Service
+Heroku
+*/
+
+/*
+Heroku 
+Getting started with nodejs app
+
+heroku login
 */
 
 /*
