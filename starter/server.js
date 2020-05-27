@@ -66,7 +66,8 @@ con.connections
 Deployment
 
 Git and Github
-git config
+git config --global user.name "devbaweja"
+git config --get user.name
 
 Creating local repo
 git init
