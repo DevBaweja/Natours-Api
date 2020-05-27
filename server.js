@@ -124,6 +124,13 @@ Heroku
 Getting started with nodejs app
 
 heroku login
+
+set package.json start as node server.js
+
+Also specify engines in package.json
+"engines": {
+    "node": ">=10.0.0"
+}
 */
 
 /*
