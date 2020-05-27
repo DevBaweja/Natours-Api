@@ -81,6 +81,11 @@ git commit -m "message"
 
 git remote add origin https://github.com/DevBaweja/Natours-Api.git
 git push -u origin master
+
+git pull origin master
+
+U Untracked
+M Modified
 */
 
 /*
