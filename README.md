@@ -4,12 +4,12 @@ Full Stack Modern Tours Bookings App containing api and server side rendered web
 ## Consumable API
 This api contain endpoints for tours,users,reviews resources.
 ```
-https://documenter.getpostman.com/view/11335562/Szt7BBYy
+[Go to API](https://documenter.getpostman.com/view/11335562/Szt7BBYy)
 ```
 
 ## Server Side Website
 ```
-
+[Go to Website](https://natours-devapps.herokuapp.com/)
 ```
 ## Features
 * Easily consumable [API](https://documenter.getpostman.com/view/11335562/Szt7BBYy?version=latest) with documentation
