@@ -77,3 +77,7 @@ if (bookBtn) {
         event.target.textContent = 'Book tour now!';
     });
 }
+
+const alertMessage = document.querySelector('body').dataset.alert;
+
+if (alertMessage) showAlert('success', alertMessage ,20);
