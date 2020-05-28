@@ -256,7 +256,21 @@ app.options('*',cors());
 
 */
 /*
+Stripe Webhhok
 
+Create endpoint in stripe which will post data once
+checkout is successful
+and then we can response it in app 
+
+Also we need to respond before body-parsing
+as we data as raw form ie readable stream
+
+Add middleware to parser raw data
+express.raw(options)
+bodyParser.raw(options)
+options = { 
+    type: 'application/json',
+}
 */
 /*
 TODO:
