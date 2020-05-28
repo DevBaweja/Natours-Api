@@ -204,8 +204,60 @@ process.on('SIGTERM', () => {
 
 We don't need process.exit(-1)
 SIGTERM will do this automatically
-*/
 
+heroku ps
+
+heroku ps:restart
+
+heroku logs --tail
+*/
+/*
+CORS
+Cross-Origin Resource Sharing
+
+Differnet domain 
+herokuapp.com is domain
+CORS by default is not allowed
+
+In console in google.com
+const res = await fetch('https://natours-devapps.herokuapp.com/api/v1/tours')
+This only applie to req make from browser
+like fetch nad axios
+
+From server we will always be able to make cors request
+
+For considering an cors req,
+Different domain | sub-domain | protocol | port
+
+npm i cors
+
+app.use(cors())
+Access-Control-Allow-Origin *
+
+API - api.natours.com
+Web - natours.com
+
+app.use({
+    origin: 'https://natours.com
+})
+
+These will only work for simple request 
+GET and POST
+
+Non-Simple request
+PUt, PATCH and DELETE
+Req send Cookies or non-standard headers
+
+They require pre-flight phase
+Browser does options req to figure out if this req is save to send
+On server we then need to respond to that options req
+
+app.options('*',cors());
+
+*/
+/*
+
+*/
 /*
 TODO:
 API
