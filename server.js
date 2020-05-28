@@ -44,6 +44,12 @@ process.on('unhandledRejection', (err) => {
     });
 });
 
+process.on('SIGTERM', () => {
+    console.log('Sigterm received. Shutting down gracefully.');
+    server.close(() => {
+        console.log('Process terminated.');
+    });
+});
 /*
 In mongo shell
 Server - mongo "mongodb+srv://cluster0-ta2cm.mongodb.net/test"  --username dev
@@ -131,6 +137,73 @@ Also specify engines in package.json
 "engines": {
     "node": ">=10.0.0"
 }
+
+Also specify 
+const port = process.env.PORT || 3000
+
+heroku create
+Heroku integrate with git 
+So make sure to use heroku create on root folder of git 
+
+We added remote branch pointing to github and that branch was called origin
+heroku create will create new remote branch caleed heroku
+
+git push heroku master
+
+heroku open
+
+Getting error as environment variables are undefined
+since it was not commited
+
+heroku logs --tail
+
+Now we define each environment variable using heroku
+
+heroku config:set NODE_ENV=production
+
+heroku apps:rename natours
+
+https : heroku does all the ssl certificate management 
+
+gzip compression
+GiftOfSpeed
+*/
+// Heroku Specific
+/*
+Testing for secure https connections 
+
+In cookieOptions we set that this cookie can only be send via secure connection
+when we are in production however if we are in production that does n't mean connection is 
+secure
+Not all deployed application are automatically set to https 
+
+We have req.secure which will be set to true only when we have a secure connection
+
+However in heroku it doesn't work 
+req.headers['x-forwarded-proto'] set to 'https'
+
+Make our application trust proxy
+req.secure does n't at first place as heroku acts as proxy
+which kind of redirect and modifies incoming request
+
+app.enable('trust proxy')
+*/
+/*
+Responding to Sigterm Signal 
+Heroku dyno
+Dyno - Just name heroku uses for container 
+These dyno restart every 24 hr and way it does is to send
+sigterm and then application will shut down immediately
+
+process.on('SIGTERM', () => {
+    console.log('Sigterm received. Shutting down gracefully.');
+    server.close(() => {
+        console.log('Process terminated.');
+    });
+});
+
+We don't need process.exit(-1)
+SIGTERM will do this automatically
 */
 
 /*
