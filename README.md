@@ -7,7 +7,7 @@ This api contain endpoints for tours, users, reviews resources.
 
 ## Server Side Website
 This website is hosted using heroku.
-#### [Go to Website](https://natours-devapps.herokuapp.com/)
+#### [Go to Website](https://natours-devapps.herokuapp.com)
 
 ## Installing
 A step by step series of examples that tell you how to get a development env running
